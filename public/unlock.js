@@ -18,8 +18,9 @@ btn.addEventListener('click', (e) => {
         .then((result) => {
             url.value = "";
             title.value = "";
-            const { template } = result;
+            const { template, articleTitle } = result;
             doc.innerHTML = template;
+            document.title = articleTitle;
         })
         .catch((err) => {
             console.log(err);
